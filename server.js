@@ -1,5 +1,5 @@
 // created on July 29, 2017 for Thinkful Unit 2 Lesson 2 Project 3
-// by Steven Povlitz. Project is a blog api with mongo peristance
+// by Steven Povlitz. Project is a blog api with mongo persistence
 
 const bodyParser = require('body-parser');
 const express = require('express');
