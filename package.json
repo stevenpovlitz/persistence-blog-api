@@ -1,0 +1,32 @@
+{
+  "name": "persistence-blog-api",
+  "version": "1.0.0",
+  "description": "This app is practice using Mongo/Mongoose in an Express app to build a blog app API with similar functionality to one built earlier in the Thinkful Node course, but this time using Mongoose to build the blog model.",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenpovlitz/persistence-blog-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.2",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "faker": "^3.1.0",
+    "mocha": "^3.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/stevenpovlitz/persistence-blog-api/issues"
+  },
+  "homepage": "https://github.com/stevenpovlitz/persistence-blog-api#readme"
+}
