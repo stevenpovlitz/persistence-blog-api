@@ -3,15 +3,15 @@ const mongoose = require('mongoose');
 // schema to represent a blog post
 const blogpostSchema = mongoose.Schema({
   author: {
-    firstname: String,
-    lastname: String
+    firstName: String,
+    lastName: String
   },
   title: {type: String},
   content: {type: String}
 });
 
 blogpostSchema.virtual('name').get(function() {
-  return this.author.firstname + ' ' + this.author.lastname;
+  return this.author.firstName + ' ' + this.author.lastName;
 });
 
 // this is an *instance method* which will be available on all instances
