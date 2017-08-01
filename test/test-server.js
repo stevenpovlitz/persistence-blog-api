@@ -24,7 +24,7 @@ describe('Normal Case blog api interactions', function() {
   });
 
   // test strategy:
-  //  1. make a get request to '/blog-posts'
+  //  1. make a get request to '/posts'
   //  2. inspect that the response is in json, isn't empty,
   //  elemnts have required keys and json enough elements
   it('should GET all blog posts', function() {
@@ -54,7 +54,10 @@ describe('Normal Case blog api interactions', function() {
     const newPost = {
       title: 'Lorem ip some',
       content: 'foo foo foo foo',
-      author: {firstName: 'Emma', lastName: 'Goldman'}
+      author: {
+        firstName: 'Emma',
+        lastName: 'Goldman'
+      }
     };
     const expectedKeys = ['id'].concat(Object.keys(newPost));
 
@@ -99,7 +102,7 @@ describe('Normal Case blog api interactions', function() {
 
         console.log(`updated post id: ${updatedPost.id}\n${updatedPost.author}`)
         return chai.request(app)
-          .put(`/blog-posts/${updatedPost.id}`)
+          .put(`/posts/${updatedPost.id}`)
           .send(updatedPost)
           .then(function(res) {
             res.should.have.status(204);
@@ -110,10 +113,10 @@ describe('Normal Case blog api interactions', function() {
   it('should delete posts on DELETE', function() {
     return chai.request(app)
       // first have to get
-      .get('/blog-posts')
+      .get('/posts')
       .then(function(res) {
         return chai.request(app)
-          .delete(`/blog-posts/${res.body[0].id}`)
+          .delete(`/posts/${res.body[0].id}`)
           .then(function(res) {
             res.should.have.status(204);
           });
